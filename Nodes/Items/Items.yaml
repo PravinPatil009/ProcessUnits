@@ -1,0 +1,156 @@
+Name: Items
+Type: FolderType
+Children:
+- Name: ISA95ObjectTypes
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "9f83743df87f455b619322d61ecff315"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Name: ISA95ObjectTypes
+    Type: FolderType
+    Children:
+    - Name: ISA95JobResponseProvider
+      Id: g=150221ba61c2a744d3c0ce3f5bc949e1
+      Supertype: ISA95JobResponseProviderObjectType
+      Children:
+      - Class: Reference
+        Target: ns=5;i=7002
+        Direction: Forward
+      - Class: Reference
+        Target: ns=5;i=7014
+        Direction: Forward
+    - Name: ISA95JobOrderReceiver
+      Id: g=82dbd335d479383c6f751bfdbcd415ba
+      Supertype: ISA95JobOrderReceiverObjectType
+      Children:
+      - Name: MaterialClassID
+        Type: BaseDataVariableType
+        DataType: String
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+      - Name: EquipmentID
+        Type: BaseDataVariableType
+        DataType: String
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+      - Name: MaterialDefinitionID
+        Type: BaseDataVariableType
+        DataType: String
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+      - Name: WorkMaster
+        Type: BaseDataVariableType
+        DataType: ISA95WorkMasterDataType
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+      - Name: MaxDownloadableJobOrders
+        Type: PropertyType
+        DataType: UInt16
+      - Name: CurrentState
+        Type: FiniteStateVariableType
+        DataType: LocalizedText
+        Children:
+        - Name: Id
+          Type: PropertyType
+          DataType: NodeId
+      - Name: PhysicalAssetID
+        Type: BaseDataVariableType
+        DataType: String
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+      - Name: JobOrderList
+        Type: BaseDataVariableType
+        DataType: ISA95JobOrderAndStateDataType
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+      - Name: PersonnelID
+        Type: BaseDataVariableType
+        DataType: String
+        ValueRank: OneDimension
+        ArrayDimensions: [0]
+    - Name: ISA95JobResponseReceiver
+      Id: g=d431d93b431d6a5b3ca486aa5a03b63b
+      Supertype: ISA95JobResponseReceiverObjectType
+      Children:
+      - Class: Reference
+        Target: ns=5;i=7003
+        Direction: Forward
+- Name: ProcessUnit
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "277631b71bb76200761b0a6d6d743793"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Name: ProcessUnit
+    Id: g=346e954d47101ecf183d9d16968cf092
+    Supertype: BaseObjectType
+    DisplayName: {"LocaleId":"","Text":"ProcessUnit"}
+    Children:
+    - Name: unitReady
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: status
+      Type: BaseDataVariableType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"status"}
+    - Name: orderId
+      Type: BaseDataVariableType
+      DataType: String
+      DisplayName: {"LocaleId":"","Text":"orderId"}
+    - Name: consume
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: complete
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: start
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: operationReady
+      Type: BaseDataVariableType
+      DataType: Boolean
+    - Name: logicalName
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "0"
+    - Name: description
+      Type: BaseDataVariableType
+      DataType: String
+      Value: "0"
+    - Name: produce
+      Type: BaseDataVariableType
+      DataType: Boolean
+- Name: designtime
+  Type: ObjectLibraryItem
+  Children:
+  - Name: LibraryItemGuid
+    Type: BaseDataVariableType
+    DataType: Guid
+    Value: "e067a00c208201c04840415036811b84"
+  - Name: LibraryItemVersion
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 1
+  - Name: designtime
+    Type: FolderType
+    Children:
+    - Name: IIOTDesignTimeConfigurer
+      Type: NetLogic
+      Children:
+      - Name: BehaviourStartPriority
+        Type: BehaviourStartPriorityVariableType
+        DataType: Byte
+        Value: 180
+      - Class: Method
+        Name: Setup_IIOT_Model
